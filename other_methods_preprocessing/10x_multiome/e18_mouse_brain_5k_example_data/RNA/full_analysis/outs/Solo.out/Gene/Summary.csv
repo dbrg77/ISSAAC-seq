@@ -1,0 +1,20 @@
+Number of Reads,474002632
+Reads With Valid Barcodes,0.961188
+Sequencing Saturation,0.835867
+Q30 Bases in CB+UMI,0.925042
+Q30 Bases in RNA read,0.896064
+Reads Mapped to Genome: Unique+Multiple,0.887087
+Reads Mapped to Genome: Unique,0.733867
+Reads Mapped to Gene: Unique+Multipe Gene,0.410159
+Reads Mapped to Gene: Unique Gene,0.389891
+Estimated Number of Cells,6049
+Unique Reads in Cells Mapped to Gene,149237950
+Fraction of Unique Reads in Cells,0.807525
+Mean Reads per Cell,24671
+Median Reads per Cell,18337
+UMIs in Cells,24204350
+Mean UMI per Cell,4001
+Median UMI per Cell,3049
+Mean Gene per Cell,1818
+Median Gene per Cell,1696
+Total Gene Detected,23585

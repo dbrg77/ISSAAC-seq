@@ -1,0 +1,11 @@
+                                         nUnmapped       52628968
+                                        nNoFeature      340736965
+                                     nAmbigFeature         993846
+                             nAmbigFeatureMultimap         727321
+                                          nTooMany         102972
+                                     nNoExactMatch          62840
+                                       nExactMatch      143666815
+                                            nMatch      149323171
+                                      nMatchUnique      148329325
+                                     nCellBarcodes         279325
+                                             nUMIs       53425622

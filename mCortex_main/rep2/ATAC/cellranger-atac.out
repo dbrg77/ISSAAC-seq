@@ -1,0 +1,765 @@
+Martian Runtime - v4.0.5
+Serving UI at http://s002:44212?auth=elQilmI6NCJ7nGEsEE6LJiM_w7OUesVQkBYBMSKot1A
+
+Running preflight checks (please wait)...
+2022-05-19 14:31:39 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.ATAC_SETUP_CHUNKS
+2022-05-19 14:31:39 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.ATAC_SETUP_CHUNKS.fork0.chnk0.main
+2022-05-19 14:31:41 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.ATAC_SETUP_CHUNKS
+2022-05-19 14:31:41 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS
+2022-05-19 14:31:41 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0.split
+2022-05-19 14:31:42 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS
+2022-05-19 14:31:42 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0.chnk0.main
+2022-05-19 14:37:44 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 14:43:44 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 14:49:43 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 14:55:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 15:01:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 15:07:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 15:13:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 15:19:48 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 15:25:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 15:31:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0 chunks_running
+2022-05-19 15:35:00 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS
+2022-05-19 15:35:00 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS.fork0.join
+2022-05-19 15:35:12 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MAKE_ATAC_SHARDS
+2022-05-19 15:35:12 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.split
+2022-05-19 15:35:12 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk00.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk01.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk02.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk03.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk04.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk05.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk06.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk07.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk08.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk09.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk10.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk11.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk12.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk13.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk14.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk15.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk16.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk17.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk18.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk19.main
+2022-05-19 15:35:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk20.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk21.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk22.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk23.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk24.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk25.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk26.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk27.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk28.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk29.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk30.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk31.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk32.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk33.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk34.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk35.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk36.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk37.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk38.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk39.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk40.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk41.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk42.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk43.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk44.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk45.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk46.main
+2022-05-19 15:35:13 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.chnk47.main
+2022-05-19 15:41:14 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (0/48 completed)
+2022-05-19 15:47:16 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (0/48 completed)
+2022-05-19 15:53:15 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (0/48 completed)
+2022-05-19 15:59:16 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (0/48 completed)
+2022-05-19 16:05:14 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (0/48 completed)
+2022-05-19 16:10:18 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (20/48 completed)
+2022-05-19 16:15:18 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (20/48 completed)
+2022-05-19 16:20:24 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (20/48 completed)
+2022-05-19 16:25:26 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (20/48 completed)
+2022-05-19 16:30:29 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (20/48 completed)
+2022-05-19 16:35:37 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (20/48 completed)
+2022-05-19 16:40:43 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (31/48 completed)
+2022-05-19 16:45:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (40/48 completed)
+2022-05-19 16:51:04 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (40/48 completed)
+2022-05-19 16:56:16 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (40/48 completed)
+2022-05-19 17:01:36 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (40/48 completed)
+2022-05-19 17:07:05 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0 chunks running (40/48 completed)
+2022-05-19 17:11:23 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS
+2022-05-19 17:11:23 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS.fork0.join
+2022-05-19 17:11:23 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.ALIGN_ATAC_READS
+2022-05-19 17:11:23 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES
+2022-05-19 17:11:23 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.split
+2022-05-19 17:11:32 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk00.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk01.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk02.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk03.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk04.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk05.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk06.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk07.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk08.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk09.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk10.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk11.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk12.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk13.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk14.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk15.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk16.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk17.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk18.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk19.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk20.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk21.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk22.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk23.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk24.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk25.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk26.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk27.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk28.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk29.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk30.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk31.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk32.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk33.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk34.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk35.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk36.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk37.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk38.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk39.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk40.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk41.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk42.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk43.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk44.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk45.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk46.main
+2022-05-19 17:11:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.chnk47.main
+2022-05-19 17:17:33 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 17:23:33 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 17:29:34 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 17:35:35 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 17:41:35 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 17:47:35 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 17:53:36 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 17:59:36 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:05:37 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:11:37 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:17:38 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:23:36 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:29:36 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:35:36 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:41:37 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:47:37 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:53:37 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 18:59:37 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:05:38 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:11:38 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:17:39 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:23:39 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:29:40 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:35:40 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:41:40 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:47:41 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:53:41 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 19:59:41 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:05:42 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:11:42 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:17:43 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:23:43 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:29:41 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:35:42 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:41:42 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:47:42 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:53:43 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 20:59:43 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:05:44 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:11:44 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:17:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:23:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:29:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:35:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:41:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:47:44 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:53:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 21:59:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:05:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:11:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:17:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:23:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:29:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:35:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:41:48 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:47:48 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:53:49 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 22:59:49 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:05:50 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:11:50 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:17:50 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:23:51 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:29:51 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:35:51 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:41:51 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (0/48 completed)
+2022-05-19 23:47:14 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (1/48 completed)
+2022-05-19 23:52:21 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (7/48 completed)
+2022-05-19 23:57:28 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (14/48 completed)
+2022-05-20 00:02:31 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (23/48 completed)
+2022-05-20 00:07:40 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:13:04 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:18:15 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:23:18 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:28:26 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:33:41 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:39:04 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:44:16 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:49:18 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:54:27 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 00:59:41 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:05:08 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:10:16 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:15:19 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:20:27 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:25:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:31:08 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:36:17 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:41:22 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:46:27 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:51:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 01:57:09 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:02:20 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:07:22 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:12:31 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:17:45 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:23:09 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:28:21 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:33:23 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:38:32 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (27/48 completed)
+2022-05-20 02:43:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (29/48 completed)
+2022-05-20 02:49:25 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (30/48 completed)
+2022-05-20 02:54:39 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (30/48 completed)
+2022-05-20 02:59:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (32/48 completed)
+2022-05-20 03:05:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (32/48 completed)
+2022-05-20 03:11:49 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (33/48 completed)
+2022-05-20 03:17:05 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (36/48 completed)
+2022-05-20 03:22:18 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (43/48 completed)
+2022-05-20 03:27:50 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (45/48 completed)
+2022-05-20 03:33:50 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (45/48 completed)
+2022-05-20 03:39:49 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (45/48 completed)
+2022-05-20 03:45:52 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (45/48 completed)
+2022-05-20 03:51:51 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (45/48 completed)
+2022-05-20 03:57:51 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (45/48 completed)
+2022-05-20 04:03:53 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (45/48 completed)
+2022-05-20 04:09:46 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 chunks running (47/48 completed)
+2022-05-20 04:10:04 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES
+2022-05-20 04:10:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0.join
+2022-05-20 04:16:06 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES.fork0 join_running
+2022-05-20 04:21:12 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.MARK_ATAC_DUPLICATES
+2022-05-20 04:21:12 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM
+2022-05-20 04:21:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.split
+2022-05-20 04:21:12 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.REPORT_INSERT_SIZES
+2022-05-20 04:21:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.REPORT_INSERT_SIZES.fork0.chnk0.main
+2022-05-20 04:21:12 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.COUNT_CUT_SITES
+2022-05-20 04:21:12 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.COUNT_CUT_SITES.fork0.chnk0.main
+2022-05-20 04:21:20 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk00.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk01.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk02.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk03.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk04.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk05.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk06.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk07.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk08.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk09.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk10.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk11.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk12.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk13.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk14.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk15.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk16.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk17.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk18.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk19.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk20.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk21.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk22.main
+2022-05-20 04:21:20 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.chnk23.main
+2022-05-20 04:22:50 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.REPORT_INSERT_SIZES
+2022-05-20 04:23:45 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.COUNT_CUT_SITES
+2022-05-20 04:23:45 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.CONVERT_SIGNAL_TRACK
+2022-05-20 04:23:45 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.CONVERT_SIGNAL_TRACK.fork0.chnk0.main
+2022-05-20 04:23:45 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS
+2022-05-20 04:23:45 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.split
+2022-05-20 04:26:21 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0 chunks running (1/24 completed)
+2022-05-20 04:29:48 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.CONVERT_SIGNAL_TRACK.fork0 chunks_running
+2022-05-20 04:29:48 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 split_running
+2022-05-20 04:30:30 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM
+2022-05-20 04:30:30 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0.join
+2022-05-20 04:35:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 split_running
+2022-05-20 04:35:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.CONVERT_SIGNAL_TRACK.fork0 chunks_running
+2022-05-20 04:36:32 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM.fork0 join_running
+2022-05-20 04:39:20 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.CONVERT_SIGNAL_TRACK
+2022-05-20 04:41:21 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.WRITE_ATAC_BAM
+2022-05-20 04:41:48 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 split_running
+2022-05-20 04:47:48 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 split_running
+2022-05-20 04:53:47 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 split_running
+2022-05-20 04:59:50 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 split_running
+2022-05-20 05:05:49 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 split_running
+2022-05-20 05:07:35 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk00.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk01.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk02.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk03.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk04.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk05.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk06.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk07.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk08.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk09.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk10.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk11.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk12.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk13.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk14.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk15.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk16.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk17.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk18.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk19.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk20.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk21.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk22.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk23.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk24.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk25.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk26.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk27.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk28.main
+2022-05-20 05:07:36 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.chnk29.main
+2022-05-20 05:12:39 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0 chunks running (25/30 completed)
+2022-05-20 05:13:32 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS
+2022-05-20 05:13:32 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS.fork0.join
+2022-05-20 05:13:35 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER._PEAK_CALLER.DETECT_PEAKS
+2022-05-20 05:13:35 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.COMPUTE_GC_DISTRIBUTION
+2022-05-20 05:13:35 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.COMPUTE_GC_DISTRIBUTION.fork0.split
+2022-05-20 05:13:35 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.COMPUTE_FRAGMENT_METRICS
+2022-05-20 05:13:35 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.COMPUTE_FRAGMENT_METRICS.fork0.split
+2022-05-20 05:13:35 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX
+2022-05-20 05:13:35 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.split
+2022-05-20 05:13:35 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES
+2022-05-20 05:13:35 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.split
+2022-05-20 05:13:35 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS
+2022-05-20 05:13:35 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.split
+2022-05-20 05:13:35 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.COMPUTE_FRAGMENT_METRICS
+2022-05-20 05:13:35 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.COMPUTE_FRAGMENT_METRICS.fork0.join
+2022-05-20 05:13:35 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.COMPUTE_GC_DISTRIBUTION
+2022-05-20 05:13:35 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.COMPUTE_GC_DISTRIBUTION.fork0.join
+2022-05-20 05:13:36 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk00.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk01.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk02.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk03.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk04.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk05.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk06.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk07.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk08.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk09.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk10.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk11.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk12.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk13.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk14.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk15.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk16.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk17.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk18.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk19.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk20.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk21.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk22.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk23.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk24.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk25.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk26.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk27.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk28.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.chnk29.main
+2022-05-20 05:13:37 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk00.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk01.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk02.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk03.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk04.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk05.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk06.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk07.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk08.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk09.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk10.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk11.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk12.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk13.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk14.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk15.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk16.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk17.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk18.main
+2022-05-20 05:13:37 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.chnk19.main
+2022-05-20 05:13:49 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk00.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk01.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk02.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk03.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk04.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk05.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk06.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk07.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk08.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk09.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk10.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk11.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk12.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk13.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk14.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk15.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk16.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk17.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk18.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk19.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk20.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk21.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk22.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk23.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk24.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk25.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk26.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk27.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk28.main
+2022-05-20 05:13:50 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.chnk29.main
+2022-05-20 05:13:52 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS
+2022-05-20 05:13:52 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS.fork0.join
+2022-05-20 05:13:52 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.COMPUTE_GC_DISTRIBUTION
+2022-05-20 05:13:52 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS
+2022-05-20 05:13:52 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.split
+2022-05-20 05:13:57 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk00.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk01.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk02.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk03.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk04.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk05.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk06.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk07.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk08.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk09.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk10.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk11.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk12.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk13.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk14.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk15.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk16.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk17.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk18.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk19.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk20.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk21.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk22.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk23.main
+2022-05-20 05:13:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.chnk24.main
+2022-05-20 05:14:18 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.ANNOTATE_PEAKS
+2022-05-20 05:14:24 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS
+2022-05-20 05:14:24 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS.fork0.join
+2022-05-20 05:14:26 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.SCAN_MOTIFS
+2022-05-20 05:15:30 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES
+2022-05-20 05:15:30 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES.fork0.join
+2022-05-20 05:16:02 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_LOW_TARGETING_BARCODES
+2022-05-20 05:16:02 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS
+2022-05-20 05:16:02 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.split
+2022-05-20 05:16:03 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES
+2022-05-20 05:16:03 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.split
+2022-05-20 05:16:04 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk00.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk01.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk02.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk03.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk04.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk05.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk06.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk07.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk08.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk09.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk10.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk11.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk12.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk13.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk14.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk15.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk16.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk17.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk18.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk19.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk20.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk21.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk22.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk23.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk24.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk25.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk26.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk27.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk28.main
+2022-05-20 05:16:04 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.chnk29.main
+2022-05-20 05:16:04 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk00.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk01.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk02.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk03.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk04.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk05.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk06.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk07.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk08.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk09.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk10.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk11.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk12.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk13.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk14.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk15.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk16.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk17.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk18.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk19.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk20.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk21.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk22.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk23.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk24.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk25.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk26.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk27.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk28.main
+2022-05-20 05:16:05 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.chnk29.main
+2022-05-20 05:17:59 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS
+2022-05-20 05:17:59 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS.fork0.join
+2022-05-20 05:19:11 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES
+2022-05-20 05:19:11 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES.fork0.join
+2022-05-20 05:19:38 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.COMPUTE_FRAGMENT_METRICS.fork0 join_running
+2022-05-20 05:19:53 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0 chunks running (0/30 completed)
+2022-05-20 05:19:53 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_GEL_BEAD_DOUBLET_BARCODES
+2022-05-20 05:20:27 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX
+2022-05-20 05:20:27 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX.fork0.join
+2022-05-20 05:22:56 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._ATAC_MATRIX_COMPUTER.GENERATE_PEAK_MATRIX
+2022-05-20 05:23:43 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.REMOVE_BARCODE_MULTIPLETS
+2022-05-20 05:23:43 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.MERGE_EXCLUDED_BARCODES
+2022-05-20 05:23:43 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.MERGE_EXCLUDED_BARCODES.fork0.chnk0.main
+2022-05-20 05:23:46 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.MERGE_EXCLUDED_BARCODES
+2022-05-20 05:23:46 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES
+2022-05-20 05:23:46 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.split
+2022-05-20 05:23:49 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk00.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk01.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk02.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk03.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk04.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk05.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk06.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk07.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk08.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk09.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk10.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk11.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk12.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk13.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk14.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk15.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk16.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk17.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk18.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk19.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk20.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk21.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk22.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk23.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk24.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk25.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk26.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk27.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk28.main
+2022-05-20 05:23:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.chnk29.main
+2022-05-20 05:24:18 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.COMPUTE_FRAGMENT_METRICS
+2022-05-20 05:24:19 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.REPORT_TSS_CTCF
+2022-05-20 05:24:19 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.REPORT_TSS_CTCF.fork0.chnk0.main
+2022-05-20 05:24:19 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.REPORT_TSS_CTCF
+2022-05-20 05:24:41 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES
+2022-05-20 05:24:41 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES.fork0.join
+2022-05-20 05:24:53 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.DETECT_CELL_BARCODES
+2022-05-20 05:24:53 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY
+2022-05-20 05:24:53 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.split
+2022-05-20 05:24:53 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.MERGE_SINGLECELL_METRICS
+2022-05-20 05:24:53 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.MERGE_SINGLECELL_METRICS.fork0.chnk0.main
+2022-05-20 05:24:53 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.FILTER_PEAK_MATRIX
+2022-05-20 05:24:53 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.FILTER_PEAK_MATRIX.fork0.split
+2022-05-20 05:24:53 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.MERGE_CELL_METRICS
+2022-05-20 05:24:53 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.MERGE_CELL_METRICS.fork0.chnk0.main
+2022-05-20 05:24:54 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER._PRODUCE_CELL_BARCODES.MERGE_CELL_METRICS
+2022-05-20 05:24:54 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.FILTER_PEAK_MATRIX
+2022-05-20 05:24:54 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.FILTER_PEAK_MATRIX.fork0.join
+2022-05-20 05:24:55 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk00.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk01.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk02.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk03.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk04.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk05.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk06.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk07.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk08.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk09.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk10.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk11.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk12.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk13.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk14.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk15.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk16.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk17.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk18.main
+2022-05-20 05:24:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.chnk19.main
+2022-05-20 05:25:08 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.MERGE_SINGLECELL_METRICS
+2022-05-20 05:25:08 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.SUMMARIZE_SINGLECELL_METRICS
+2022-05-20 05:25:08 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.SUMMARIZE_SINGLECELL_METRICS.fork0.chnk0.main
+2022-05-20 05:25:11 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.SUMMARIZE_SINGLECELL_METRICS
+2022-05-20 05:26:23 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._BASIC_SC_ATAC_COUNTER.FILTER_PEAK_MATRIX
+2022-05-20 05:26:23 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_ANALYZER_PREFLIGHT
+2022-05-20 05:26:23 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_ANALYZER_PREFLIGHT.fork0.chnk0.main
+2022-05-20 05:26:23 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.GENERATE_TF_MATRIX
+2022-05-20 05:26:23 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.GENERATE_TF_MATRIX.fork0.split
+2022-05-20 05:26:23 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.REDUCE_DIMENSIONS
+2022-05-20 05:26:23 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.REDUCE_DIMENSIONS.fork0.split
+2022-05-20 05:26:24 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_ANALYZER_PREFLIGHT
+2022-05-20 05:26:24 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.REDUCE_DIMENSIONS
+2022-05-20 05:26:24 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.REDUCE_DIMENSIONS.fork0.chnk0.main
+2022-05-20 05:26:26 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.GENERATE_TF_MATRIX
+2022-05-20 05:26:26 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.GENERATE_TF_MATRIX.fork0.join
+2022-05-20 05:27:14 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER._PEAK_ANNOTATOR.GENERATE_TF_MATRIX
+2022-05-20 05:27:40 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.REDUCE_DIMENSIONS
+2022-05-20 05:27:40 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.REDUCE_DIMENSIONS.fork0.join
+2022-05-20 05:27:41 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.REDUCE_DIMENSIONS
+2022-05-20 05:27:42 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.RUN_MANIFOLD_PROJECTION
+2022-05-20 05:27:42 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.RUN_MANIFOLD_PROJECTION.fork0.split
+2022-05-20 05:27:42 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_RUN_GRAPH_CLUSTERING
+2022-05-20 05:27:42 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_RUN_GRAPH_CLUSTERING.fork0.split
+2022-05-20 05:27:42 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS
+2022-05-20 05:27:42 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS.fork0.split
+2022-05-20 05:27:44 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_RUN_GRAPH_CLUSTERING
+2022-05-20 05:27:44 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_RUN_GRAPH_CLUSTERING.fork0.chnk0.main
+2022-05-20 05:27:45 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS
+2022-05-20 05:27:45 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS.fork0.chnk0.main
+2022-05-20 05:27:45 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS.fork0.chnk1.main
+2022-05-20 05:27:45 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS.fork0.chnk2.main
+2022-05-20 05:27:45 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS.fork0.chnk3.main
+2022-05-20 05:27:47 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_RUN_GRAPH_CLUSTERING
+2022-05-20 05:27:47 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_RUN_GRAPH_CLUSTERING.fork0.join
+2022-05-20 05:27:47 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS
+2022-05-20 05:27:47 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS.fork0.join
+2022-05-20 05:27:49 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.CLUSTER_CELLS
+2022-05-20 05:27:49 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.RUN_MANIFOLD_PROJECTION
+2022-05-20 05:27:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.RUN_MANIFOLD_PROJECTION.fork0.chnk0.main
+2022-05-20 05:27:54 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_RUN_GRAPH_CLUSTERING
+2022-05-20 05:27:54 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_COMBINE_CLUSTERING
+2022-05-20 05:27:54 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_COMBINE_CLUSTERING.fork0.chnk0.main
+2022-05-20 05:27:55 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_COMBINE_CLUSTERING
+2022-05-20 05:27:55 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS
+2022-05-20 05:27:55 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.split
+2022-05-20 05:27:56 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk00.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk01.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk02.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk03.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk04.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk05.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk06.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk07.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk08.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk09.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk10.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk11.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk12.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk13.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk14.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk15.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk16.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk17.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk18.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk19.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk20.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk21.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk22.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk23.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk24.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk25.main
+2022-05-20 05:27:57 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.chnk26.main
+2022-05-20 05:28:21 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.RUN_MANIFOLD_PROJECTION
+2022-05-20 05:28:21 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.RUN_MANIFOLD_PROJECTION.fork0.join
+2022-05-20 05:30:21 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.RUN_MANIFOLD_PROJECTION
+2022-05-20 05:30:41 [runtime] (update)          ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0 chunks running (1/20 completed)
+2022-05-20 05:31:01 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY
+2022-05-20 05:31:01 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY.fork0.join
+2022-05-20 05:31:03 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_METRIC_COLLECTOR.ESTIMATE_LIBRARY_COMPLEXITY
+2022-05-20 05:31:03 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_REPORTER.SUMMARIZE_REPORTS_SINGLECELL
+2022-05-20 05:31:03 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_REPORTER.SUMMARIZE_REPORTS_SINGLECELL.fork0.chnk0.main
+2022-05-20 05:31:03 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_REPORTER.SUMMARIZE_REPORTS_SINGLECELL
+2022-05-20 05:32:14 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS
+2022-05-20 05:32:14 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS.fork0.join
+2022-05-20 05:33:18 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.PERFORM_DIFFERENTIAL_ANALYSIS
+2022-05-20 05:33:19 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_SUMMARIZE_ANALYSIS
+2022-05-20 05:33:19 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_SUMMARIZE_ANALYSIS.fork0.split
+2022-05-20 05:33:21 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_SUMMARIZE_ANALYSIS
+2022-05-20 05:33:21 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_SUMMARIZE_ANALYSIS.fork0.join
+2022-05-20 05:33:49 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_ANALYZER.ATAC_SUMMARIZE_ANALYSIS
+2022-05-20 05:33:49 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER.ATAC_CLOUPE_PREPROCESS
+2022-05-20 05:33:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER.ATAC_CLOUPE_PREPROCESS.fork0.split
+2022-05-20 05:33:49 [runtime] (ready)           ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_REPORTER.CREATE_WEBSUMMARY
+2022-05-20 05:33:49 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_REPORTER.CREATE_WEBSUMMARY.fork0.chnk0.main
+2022-05-20 05:33:51 [runtime] (split_complete)  ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER.ATAC_CLOUPE_PREPROCESS
+2022-05-20 05:33:51 [runtime] (run:local)       ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER.ATAC_CLOUPE_PREPROCESS.fork0.join
+2022-05-20 05:34:36 [runtime] (chunks_complete) ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER._SC_ATAC_REPORTER.CREATE_WEBSUMMARY
+2022-05-20 05:38:48 [runtime] (join_complete)   ID.cellranger-atac_results.SC_ATAC_COUNTER_CS.SC_ATAC_COUNTER.ATAC_CLOUPE_PREPROCESS
+
+Outputs:
+- Per-barcode fragment counts & metrics:        /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/singlecell.csv
+- Position sorted BAM file:                     /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/possorted_bam.bam
+- Position sorted BAM index:                    /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/possorted_bam.bam.bai
+- Summary of all data metrics:                  /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/summary.json
+- HTML file summarizing data & analysis:        /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/web_summary.html
+- Bed file of all called peak locations:        /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/peaks.bed
+- Raw peak barcode matrix in hdf5 format:       /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/raw_peak_bc_matrix.h5
+- Raw peak barcode matrix in mex format:        /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/raw_peak_bc_matrix
+- Directory of analysis files:                  /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/analysis
+- Filtered peak barcode matrix in hdf5 format:  /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/filtered_peak_bc_matrix.h5
+- Filtered peak barcode matrix in mex format:   /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/filtered_peak_bc_matrix
+- Barcoded and aligned fragment file:           /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/fragments.tsv.gz
+- Fragment file index:                          /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/fragments.tsv.gz.tbi
+- Filtered tf barcode matrix in hdf5 format:    /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/filtered_tf_bc_matrix.h5
+- Filtered tf barcode matrix in mex format:     /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/filtered_tf_bc_matrix
+- Loupe Browser input file:                     /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/cloupe.cloupe
+- csv summarizing important metrics and values: /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/summary.csv
+- Annotation of peaks with genes:               /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/peak_annotation.tsv
+- Peak-motif associations:                      /scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/peak_motif_mapping.bed
+
+Waiting 6 seconds for UI to do final refresh.
+Pipestance completed successfully!
+
+2022-05-20 05:38:54 Shutting down.

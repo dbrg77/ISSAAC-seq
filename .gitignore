@@ -20,7 +20,6 @@ genome.sizes
 *.tsv
 *.bed
 coverage_plot/
-*.out
 *.err
 qc_figures/
 .snakemake/
