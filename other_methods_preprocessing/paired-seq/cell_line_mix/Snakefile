@@ -1,0 +1,113 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        'GSE130399_GSM3737488_GSM3737489_Cell_Mix.tar.gz',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/genes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/features.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/barcodes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/peaks.bed',
+        'Paired_seq_Cell_Mix_matrix/Cell_embeddings.xls',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/genes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/features.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/barcodes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/barcodes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/features.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/barcodes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/features.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/metrics.csv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/metrics.csv'
+
+rule downloadData:
+    output:
+        'GSE130399_GSM3737488_GSM3737489_Cell_Mix.tar.gz'
+    shell:
+        ''' wget 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE130399&format=file&file=GSE130399%5FGSM3737488%5FGSM3737489%5FCell%5FMix%2Etar%2Egz' \
+            -O {output}
+        '''
+
+rule extract:
+    input:
+        'GSE130399_GSM3737488_GSM3737489_Cell_Mix.tar.gz'
+    output:
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/genes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/barcodes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/peaks.bed',
+        'Paired_seq_Cell_Mix_matrix/Cell_embeddings.xls',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/genes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/barcodes.tsv'
+    shell:
+        ''' tar zxvf {input}
+        '''
+
+rule prepareFiles:
+    input:
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/genes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/genes.tsv'
+    output:
+        dna='Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/features.tsv',
+        rna='Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/features.tsv'
+    shell:
+        ''' ln -s genes.tsv {output.dna}
+            ln -s genes.tsv {output.rna}
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule fileterCellDNA:
+    input:
+        pg=config['star_bin'],
+        bc='Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/barcodes.tsv',
+        mtx='Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/matrix.mtx',
+        ft='Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA/features.tsv'
+    output:
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/barcodes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/features.tsv'
+    shell:
+        ''' num_abc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            aidx=$(echo "${{num_abc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA \
+            Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{aidx}} ${{num_abc}} 200 0.01 20000 0.01 10000
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule filterCellRNA:
+    input:
+        pg=config['star_bin'],
+        bc='Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/barcodes.tsv',
+        mtx='Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/matrix.mtx',
+        ft='Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA/features.tsv'
+    output:
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/barcodes.tsv',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/matrix.mtx',
+        'Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/features.tsv'
+    shell:
+        ''' num_rbc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            ridx=$(echo "${{num_rbc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA \
+            Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{ridx}} ${{num_rbc}} 200 0.01 20000 0.01 10000
+        '''
+
+rule getMetrics:
+    input:
+        dna='Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/matrix.mtx',
+        rna='Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/matrix.mtx'
+    output:
+        dna='Paired_seq_Cell_Mix_matrix/Cell_Mix_DNA_filtered/metrics.csv',
+        rna='Paired_seq_Cell_Mix_matrix/Cell_Mix_RNA_filtered/metrics.csv'
+    shell:
+        ''' ../../scripts/output_qc_mtx {input.dna} {output.dna}
+            ../../scripts/output_qc_mtx {input.rna} {output.rna}
+        '''

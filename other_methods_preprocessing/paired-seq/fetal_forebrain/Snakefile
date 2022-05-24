@@ -1,0 +1,114 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        'GSE130399_GSM3737496-GSM3737499_Fetal_Forebrain.tar.gz',
+        'Fetal_Forebrain/FB_RNA/genes.tsv',
+        'Fetal_Forebrain/FB_RNA/matrix.mtx',
+        'Fetal_Forebrain/FB_RNA/barcodes.tsv',
+        'Fetal_Forebrain/FB_DNA/peaks.bed',
+        'Fetal_Forebrain/FB_DNA/barcodes.tsv',
+        'Fetal_Forebrain/FB_DNA/matrix.mtx',
+        'Fetal_Forebrain/FB_DNA/genes.tsv',
+        'Fetal_Forebrain/FB_DNA/features.tsv',
+        'Fetal_Forebrain/FB_RNA/features.tsv',
+        'Fetal_Forebrain/FB_DNA_filtered/barcodes.tsv',
+        'Fetal_Forebrain/FB_DNA_filtered/matrix.mtx',
+        'Fetal_Forebrain/FB_DNA_filtered/features.tsv',
+        'Fetal_Forebrain/FB_RNA_filtered/barcodes.tsv',
+        'Fetal_Forebrain/FB_RNA_filtered/matrix.mtx',
+        'Fetal_Forebrain/FB_RNA_filtered/features.tsv',
+        'Fetal_Forebrain/FB_DNA_filtered/metrics.csv',
+        'Fetal_Forebrain/FB_RNA_filtered/metrics.csv'
+
+# download data from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130399
+rule downloadData:
+    output:
+        'GSE130399_GSM3737496-GSM3737499_Fetal_Forebrain.tar.gz'
+    shell:
+        ''' wget -nc 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE130399&format=file&file=GSE130399%5FGSM3737496%2DGSM3737499%5FFetal%5FForebrain%2Etar%2Egz' \
+            -O {output}
+        '''
+
+rule extract:
+    input:
+        'GSE130399_GSM3737496-GSM3737499_Fetal_Forebrain.tar.gz'
+    output:
+        'Fetal_Forebrain/FB_RNA/genes.tsv',
+        'Fetal_Forebrain/FB_RNA/matrix.mtx',
+        'Fetal_Forebrain/FB_RNA/barcodes.tsv',
+        'Fetal_Forebrain/FB_DNA/peaks.bed',
+        'Fetal_Forebrain/FB_DNA/barcodes.tsv',
+        'Fetal_Forebrain/FB_DNA/matrix.mtx',
+        'Fetal_Forebrain/FB_DNA/genes.tsv',
+    shell:
+        ''' tar zxvf {input}
+        '''
+
+rule prepareFiles:
+    input:
+        dna='Fetal_Forebrain/FB_DNA/genes.tsv',
+        rna='Fetal_Forebrain/FB_RNA/genes.tsv'
+    output:
+        dna='Fetal_Forebrain/FB_DNA/features.tsv',
+        rna='Fetal_Forebrain/FB_RNA/features.tsv'
+    shell:
+        ''' ln -s genes.tsv {output.dna}
+            ln -s genes.tsv {output.rna}
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule fileterCellDNA:
+    input:
+        pg=config['star_bin'],
+        bc='Fetal_Forebrain/FB_DNA/barcodes.tsv',
+        mtx='Fetal_Forebrain/FB_DNA/matrix.mtx',
+        ft='Fetal_Forebrain/FB_DNA/features.tsv'
+    output:
+        'Fetal_Forebrain/FB_DNA_filtered/barcodes.tsv',
+        'Fetal_Forebrain/FB_DNA_filtered/matrix.mtx',
+        'Fetal_Forebrain/FB_DNA_filtered/features.tsv'
+    shell:
+        ''' num_abc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            aidx=$(echo "${{num_abc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            Fetal_Forebrain/FB_DNA/ \
+            Fetal_Forebrain/FB_DNA_filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{aidx}} ${{num_abc}} 200 0.01 20000 0.01 10000
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule filterCellRNA:
+    input:
+        pg=config['star_bin'],
+        bc='Fetal_Forebrain/FB_RNA/barcodes.tsv',
+        mtx='Fetal_Forebrain/FB_RNA/matrix.mtx',
+        ft='Fetal_Forebrain/FB_RNA/features.tsv'
+    output:
+        'Fetal_Forebrain/FB_RNA_filtered/barcodes.tsv',
+        'Fetal_Forebrain/FB_RNA_filtered/matrix.mtx',
+        'Fetal_Forebrain/FB_RNA_filtered/features.tsv'
+    shell:
+        ''' num_rbc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            ridx=$(echo "${{num_rbc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            Fetal_Forebrain/FB_RNA/ \
+            Fetal_Forebrain/FB_RNA_filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{ridx}} ${{num_rbc}} 200 0.01 20000 0.01 10000
+        '''
+
+rule getMetrics:
+    input:
+        dnabc='Fetal_Forebrain/FB_DNA_filtered/barcodes.tsv',
+        dnamtx='Fetal_Forebrain/FB_DNA_filtered/matrix.mtx',
+        rnabc='Fetal_Forebrain/FB_RNA_filtered/barcodes.tsv',
+        rnamtx='Fetal_Forebrain/FB_RNA_filtered/matrix.mtx'
+    output:
+        dna='Fetal_Forebrain/FB_DNA_filtered/metrics.csv',
+        rna='Fetal_Forebrain/FB_RNA_filtered/metrics.csv'
+    shell:
+        ''' ../../scripts/output_qc_mtx {input.dnamtx} {input.dnabc} {output.dna}
+            ../../scripts/output_qc_mtx {input.rnamtx} {input.rnabc} {output.rna}
+        '''

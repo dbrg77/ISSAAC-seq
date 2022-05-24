@@ -1,0 +1,8 @@
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135221/K562_FACS_rep1_RNA_S1_I1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135221/K562_FACS_rep1_RNA_S1_I2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135221/K562_FACS_rep1_RNA_S1_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135221/K562_FACS_rep1_RNA_S1_R2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135211/K562_FACS_rep2_RNA_S2_I1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135211/K562_FACS_rep2_RNA_S2_I2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135211/K562_FACS_rep2_RNA_S2_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135211/K562_FACS_rep2_RNA_S2_R2_001.fastq.gz

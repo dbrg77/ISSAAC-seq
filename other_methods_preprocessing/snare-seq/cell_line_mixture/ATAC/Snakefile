@@ -1,0 +1,87 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        'raw_data/SRR8528319.sra',
+        'raw_data/SRR8528319_1.fastq.gz',
+        'raw_data/SRR8528319_2.fastq.gz',
+        'genome.sizes',
+        'outs/fragments.tsv.gz',
+        'outs/fragments.tsv.gz.tbi',
+        'outs/fragment_size_distribution.tsv',
+        'outs/reads.bed.gz'
+
+rule downloadSra:
+    output:
+        'raw_data/SRR8528319.sra'
+    shell:
+        ''' prefetch SRR8528319 -o raw_data/SRR8528319.sra
+        '''
+
+rule dumpFastq:
+    input:
+        'raw_data/SRR8528319.sra'
+    output:
+        'raw_data/SRR8528319_1.fastq.gz',
+        'raw_data/SRR8528319_2.fastq.gz'
+    threads: 8
+    shell:
+        ''' fasterq-dump --split-3 -e {threads} -O raw_data {input}
+            gzip raw_data/SRR8528319_1.fastq
+            gzip raw_data/SRR8528319_2.fastq
+        '''
+
+rule getGenomeSize:
+    input:
+        config['chromap_fa']
+    output:
+        'genome.sizes'
+    shell:
+        ''' faSize -detailed {input} | sort -k1,1 -k2,2n > {output}
+        '''
+
+rule chromap:
+    input:
+        r1='raw_data/SRR8528319_1.fastq.gz',
+        r2='raw_data/SRR8528319_2.fastq.gz'
+    output:
+        'outs/fragments.tsv.gz',
+        'outs/fragments.tsv.gz.tbi'
+    log:
+        'logs/chromap.err'
+    params:
+        idx=config['chromap_idx'],
+        fa=config['chromap_fa']
+    threads: 40
+    shell:
+        ''' chromap -t {threads} --preset atac -x {params.idx} -r {params.fa} \
+            -1 {input.r1} -2 {input.r2} \
+            -o outs/fragments.tsv 2> {log}
+            bgzip outs/fragments.tsv && tabix -p bed outs/fragments.tsv.gz
+        '''
+
+rule getFragmentSizeDistribution:
+    input:
+        'outs/fragments.tsv.gz'
+    output:
+        'outs/fragment_size_distribution.tsv'
+    shell:
+        ''' echo -e "size\tcount" > {output}
+            zcat {input} | sed '/^#/d' | awk '{{print $3-$2}}' | \
+            sort | uniq -c | sort -b -k2,2n | \
+            awk 'BEGIN{{OFS="\t"}}{{print $2, $1}}' >> {output}
+        '''
+
+rule convertFragToReads:
+    input:
+        frag='outs/fragments.tsv.gz',
+        gs='genome.sizes'
+    output:
+        'outs/reads.bed.gz'
+    shell:
+        ''' zcat {input.frag} | sed '/#/d' | \
+            awk 'BEGIN{{OFS="\t"}}{{print $1, $2-100, $2+100, $4, ".", "+" "\\n" $1, $3-100, $3+100, $4, ".", "-"}}' | \
+            bedClip stdin {input.gs} stdout | \
+            sort -k1,1 -k2,2n | \
+            gzip > {output}
+        '''

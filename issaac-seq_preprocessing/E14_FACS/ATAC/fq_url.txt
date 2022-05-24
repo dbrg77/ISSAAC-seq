@@ -1,0 +1,8 @@
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135209/E14_RiboLock_30C_FACS_ATAC_I1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135209/E14_RiboLock_30C_FACS_ATAC_I2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135209/E14_RiboLock_30C_FACS_ATAC_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135209/E14_RiboLock_30C_FACS_ATAC_R2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135215/E14_Protector_30C_FACS_ATAC_I1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135215/E14_Protector_30C_FACS_ATAC_I2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135215/E14_Protector_30C_FACS_ATAC_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135215/E14_Protector_30C_FACS_ATAC_R2_001.fastq.gz

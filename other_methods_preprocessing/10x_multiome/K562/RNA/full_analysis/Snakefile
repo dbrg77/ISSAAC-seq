@@ -1,0 +1,55 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        '../original_data/K562_10x_Multiome_RNA_S1_L001_R1_001.fastq.gz',
+        '../original_data/K562_10x_Multiome_RNA_S1_L001_R2_001.fastq.gz',
+        'outs/Solo.out/Gene/filtered/barcodes.tsv',
+        'outs/Solo.out/Gene/filtered/features.tsv',
+        'outs/Solo.out/Gene/filtered/matrix.mtx',
+        'outs/Aligned.sortedByCoord.out.bam',
+        'outs/Solo.out/Gene/filtered/metrics.csv'
+
+rule downloadFromEBI:
+    input:
+        '../fq_url.txt'
+    output:
+        '../original_data/K562_10x_Multiome_RNA_S1_L001_R1_001.fastq.gz',
+        '../original_data/K562_10x_Multiome_RNA_S1_L001_R2_001.fastq.gz',
+    shell:
+        ''' wget -nc -P ../original_data -i {input}
+        '''
+
+rule star:
+    input:
+        pg=config['star_bin'],
+        cdna='../original_data/K562_10x_Multiome_RNA_S1_L001_R2_001.fastq.gz',
+        cb='../original_data/K562_10x_Multiome_RNA_S1_L001_R1_001.fastq.gz',
+        wl='../../../gex_737K-arc-v1.txt'
+    output:
+        'outs/Solo.out/Gene/filtered/barcodes.tsv',
+        'outs/Solo.out/Gene/filtered/features.tsv',
+        'outs/Solo.out/Gene/filtered/matrix.mtx',
+        'outs/Aligned.sortedByCoord.out.bam'
+    params:
+        idx=config['star_idx']
+    threads: 40
+    shell:
+        ''' {input.pg} --genomeDir {params.idx} --outFileNamePrefix ./outs/ \
+            --readFilesCommand zcat --readFilesIn {input.cdna} {input.cb} \
+            --soloCBstart 1 --soloCBlen 16 --soloUMIstart 17 --soloUMIlen 12 \
+            --soloBarcodeReadLength 0 --soloType CB_UMI_Simple --clip3pNbases 115 \
+            --soloCBwhitelist {input.wl} \
+            --soloCellFilter EmptyDrops_CR --runThreadN {threads} \
+            --outSAMattributes CB UB --outSAMtype BAM SortedByCoordinate
+        '''
+
+rule getMetrics:
+    input:
+        bc='outs/Solo.out/Gene/filtered/barcodes.tsv',
+        mtx='outs/Solo.out/Gene/filtered/matrix.mtx'
+    output:
+        'outs/Solo.out/Gene/filtered/metrics.csv'
+    shell:
+        ''' ../../../../scripts/output_qc_mtx {input.mtx} {input.bc} {output}
+        '''

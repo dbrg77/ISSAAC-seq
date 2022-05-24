@@ -1,0 +1,7 @@
+{
+    "cellranger_atac_bin" : "/scratch/2022-05-16/xc1/cellranger-atac-2.0.0/cellranger-atac",
+    "cellranger_atac_ref" : "/data/bio-chenx/reference/mus_musculus/refdata-cellranger-arc-mm10-2020-A-2.0.0",
+    "bedtools_bin" : "/work/bio-chenx/tools/bedtools2/bin/bedtools",
+    "star_bin" : "/work/bio-chenx/tools/STAR-2.7.9a/bin/Linux_x86_64/STAR",
+    "star_idx" : "/data/bio-chenx/reference/mus_musculus/refdata-gex-mm10-2020-A/star_2.7.9a"
+}

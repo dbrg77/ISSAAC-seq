@@ -1,0 +1,11 @@
+{
+    "chromap_idx" : "/work/bio-chenx/reference/homo_sapiens/refdata-cellranger-arc-GRCh38-2020-A-2.0.0/chromap/genonme.index",
+    "chromap_fa" : "/work/bio-chenx/reference/homo_sapiens/refdata-cellranger-arc-GRCh38-2020-A-2.0.0/fasta/genome.fa",
+    "blacklist" : "/work/bio-chenx/tools/Blacklist/lists/Blacklist_v1/hg38-blacklist.bed.gz",
+    "macs2_gsize" : "hs",
+    "macs2_bpk" : "",
+    "macs2_format" : "BED",
+    "macs2_shift" : "--nomodel --extsize 200",
+    "bedtools_bin" : "/work/bio-chenx/tools/bedtools2/bin/bedtools",
+    "star_bin" : "/work/bio-chenx/tools/STAR/source/STAR"
+}

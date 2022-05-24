@@ -1,0 +1,4 @@
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135212/mCortex_rep1_FACS_ATAC_S1_I1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135212/mCortex_rep1_FACS_ATAC_S1_I2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135212/mCortex_rep1_FACS_ATAC_S1_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR813/ERR8135212/mCortex_rep1_FACS_ATAC_S1_R2_001.fastq.gz

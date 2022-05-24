@@ -1,0 +1,3 @@
+library_id,fragments,cells
+mCortex_rep1,/scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep1/ATAC/cellranger-atac_results/outs/fragments.tsv.gz,/scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep1/ATAC/cellranger-atac_results/outs/singlecell.csv
+mCortex_rep2,/scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/fragments.tsv.gz,/scratch/2022-05-16/xc1/ISSAAC_git/mCortex_main/rep2/ATAC/cellranger-atac_results/outs/singlecell.csv

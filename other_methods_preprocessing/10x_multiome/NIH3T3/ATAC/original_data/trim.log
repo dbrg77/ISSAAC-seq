@@ -1,0 +1,35 @@
+Sender: LSF System <lsfadmin@r01n32>
+Subject: Job 3645330: <seqtk trimfq -b 8 20220421-3T3-A_R2_001.fastq.gz | gzip > 20220421-3T3-A_I2_001.fastq.gz> in cluster <sustchpc> Done
+
+Job <seqtk trimfq -b 8 20220421-3T3-A_R2_001.fastq.gz | gzip > 20220421-3T3-A_I2_001.fastq.gz> was submitted from host <login02> by user <bio-chenx> in cluster <sustchpc> at Sat May  7 18:55:23 2022.
+Job was executed on host(s) <2*r01n32>, in queue <ser>, as user <bio-chenx> in cluster <sustchpc> at Sat May  7 18:55:23 2022.
+</work/bio-chenx> was used as the home directory.
+</scratch/2022-05-02/xc1/ISSAAC_git/public_methods_analysis/10x_multiome/NIH3T3/ATAC/original_data> was used as the working directory.
+Started at Sat May  7 18:55:23 2022.
+Terminated at Sat May  7 19:35:01 2022.
+Results reported at Sat May  7 19:35:01 2022.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+seqtk trimfq -b 8 20220421-3T3-A_R2_001.fastq.gz | gzip > 20220421-3T3-A_I2_001.fastq.gz
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2427.95 sec.
+    Max Memory :                                 4 MB
+    Average Memory :                             4.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   2378 sec.
+    Turnaround time :                            2378 sec.
+
+The output (if any) follows:
+

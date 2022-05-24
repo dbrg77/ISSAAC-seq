@@ -1,0 +1,116 @@
+configfile: 'config.json'
+
+accessions = ['SRR9672090', 'SRR9672092', 'SRR9672094', 'SRR9672096',
+              'SRR9672098', 'SRR9672100', 'SRR9672102', 'SRR9672104',
+              'SRR9672106', 'SRR9672108', 'SRR9672110', 'SRR9672112']
+
+rule all:
+    input:
+        expand('raw_data/{srr}.sra', srr=accessions),
+        expand('raw_data/{srr}_1.fastq.gz', srr=accessions),
+        expand('raw_data/{srr}_2.fastq.gz', srr=accessions),
+        'outs/fragments.tsv.gz',
+        'outs/fragments.tsv.gz.tbi',
+        'outs/fragment_size_distribution.tsv',
+        'outs/raw/barcodes.tsv',
+        'outs/raw/matrix.mtx',
+        'outs/raw/features.tsv',
+        'outs/filtered/barcodes.tsv',
+        'outs/filtered/matrix.mtx',
+        'outs/filtered/features.tsv',
+        'outs/filtered/metrics.csv'
+
+rule downloadSra:
+    output:
+        'raw_data/{srr}.sra'
+    shell:
+        ''' prefetch {wildcards.srr} -o {output}
+        '''
+
+rule dumpFastq:
+    input:
+        'raw_data/{srr}.sra'
+    output:
+        'raw_data/{srr}_1.fastq.gz',
+        'raw_data/{srr}_2.fastq.gz'
+    threads: 8
+    shell:
+        ''' fasterq-dump --split-3 -e {threads} -O raw_data {input}
+            gzip raw_data/{wildcards.srr}_1.fastq
+            gzip raw_data/{wildcards.srr}_2.fastq
+       '''
+
+rule chromap:
+    input:
+        expand('raw_data/{srr}_1.fastq.gz', srr=accessions),
+        expand('raw_data/{srr}_2.fastq.gz', srr=accessions)
+    output:
+        'outs/fragments.tsv.gz',
+        'outs/fragments.tsv.gz.tbi'
+    log:
+        'logs/chromap.err'
+    params:
+        idx=config['chromap_idx'],
+        fa=config['chromap_fa']
+    threads: 40
+    shell:
+        ''' chromap -t {threads} --preset atac -x {params.idx} -r {params.fa} \
+            -1 raw_data/SRR9672090_1.fastq.gz,raw_data/SRR9672092_1.fastq.gz,raw_data/SRR9672094_1.fastq.gz,raw_data/SRR9672096_1.fastq.gz,raw_data/SRR9672098_1.fastq.gz,raw_data/SRR9672100_1.fastq.gz,raw_data/SRR9672102_1.fastq.gz,raw_data/SRR9672104_1.fastq.gz,raw_data/SRR9672106_1.fastq.gz,raw_data/SRR9672108_1.fastq.gz,raw_data/SRR9672110_1.fastq.gz,raw_data/SRR9672112_1.fastq.gz \
+            -2 raw_data/SRR9672090_2.fastq.gz,raw_data/SRR9672092_2.fastq.gz,raw_data/SRR9672094_2.fastq.gz,raw_data/SRR9672096_2.fastq.gz,raw_data/SRR9672098_2.fastq.gz,raw_data/SRR9672100_2.fastq.gz,raw_data/SRR9672102_2.fastq.gz,raw_data/SRR9672104_2.fastq.gz,raw_data/SRR9672106_2.fastq.gz,raw_data/SRR9672108_2.fastq.gz,raw_data/SRR9672110_2.fastq.gz,raw_data/SRR9672112_2.fastq.gz \
+            -o outs/fragments.tsv 2> {log}
+            bgzip outs/fragments.tsv && tabix -p bed outs/fragments.tsv.gz
+        '''
+
+rule getFragmentSizeDistribution:
+    input:
+        'outs/fragments.tsv.gz'
+    output:
+        'outs/fragment_size_distribution.tsv'
+    shell:
+        ''' echo -e "size\tcount" > {output}
+            zcat {input} | sed '/^#/d' | awk '{{print $3-$2}}' | \
+            sort | uniq -c | sort -b -k2,2n | \
+            awk 'BEGIN{{OFS="\t"}}{{print $2, $1}}' >> {output}
+        '''
+
+# download matrices from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126074
+rule getATAC:
+    output:
+        bc='outs/raw/barcodes.tsv',
+        mtx='outs/raw/matrix.mtx',
+        pk='outs/raw/features.tsv'
+    shell:
+        '''  curl 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE126074&format=file&file=GSE126074%5FAdBrainCortex%5FSNAREseq%5Fchromatin%2Ebarcodes%2Etsv%2Egz' --output /dev/stdout | gunzip > {output.bc}
+            curl 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE126074&format=file&file=GSE126074%5FAdBrainCortex%5FSNAREseq%5Fchromatin%2Ecounts%2Emtx%2Egz' --output /dev/stdout | gunzip > {output.mtx}
+            curl 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE126074&format=file&file=GSE126074%5FAdBrainCortex%5FSNAREseq%5Fchromatin%2Epeaks%2Etsv%2Egz' --output /dev/stdout | gunzip > {output.pk}
+        '''
+
+# use the last 10% of barcodes to define emptydrops
+rule filterATAC:
+    input:
+        pg=config['star_bin'],
+        bc='outs/raw/barcodes.tsv',
+        mtx='outs/raw/matrix.mtx',
+        pk='outs/raw/features.tsv'
+    output:
+        'outs/filtered/barcodes.tsv',
+        'outs/filtered/matrix.mtx',
+        'outs/filtered/features.tsv'
+    shell:
+        ''' num_abc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            aidx=$(echo "${{num_abc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            outs/raw/ outs/filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{aidx}} ${{num_abc}} 200 0.01 20000 0.01 10000
+        '''
+
+rule getMetrics:
+    input:
+        bc='outs/filtered/barcodes.tsv',
+        mtx='outs/filtered/matrix.mtx'
+    output:
+        'outs/filtered/metrics.csv'
+    shell:
+        ''' ../../../scripts/output_qc_mtx {input.mtx} {input.bc} {output}
+        '''

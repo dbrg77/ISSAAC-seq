@@ -1,0 +1,190 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_I1_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_I2_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_R1_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_R2_001.fastq.gz',
+        'genome.sizes',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_cb.fq.gz',
+        'outs/fragments.tsv.gz',
+        'outs/fragments.tsv.gz.tbi',
+        'outs/per_cell_barcode_total_fragment_count.tsv',
+        'outs/fragment_size_distribution_GRCh38.tsv',
+        'outs/fragment_size_distribution_mm10.tsv',
+        'outs/reads.bed.gz',
+        'macs2_pk/aggregate_peaks.narrowPeak',
+        'macs2_pk/aggregate_peaks_formatted.bed',
+        'outs/peak_read_ov.tsv.gz',
+        'outs/raw_mtx/barcodes.tsv',
+        'outs/raw_mtx/peaks.bed',
+        'outs/raw_mtx/matrix.mtx',
+        'outs/per_cell_barcode_total_fragment_count_GRCh38.tsv',
+        'outs/per_cell_barcode_total_fragment_count_mm10.tsv'
+
+rule downloadFromEBI:
+    input:
+        '../fq_url.txt'
+    output:
+        '../original_data/H1_Meso_D3_FACS_ATAC_S1_I1_001.fastq.gz',
+        '../original_data/H1_Meso_D3_FACS_ATAC_S1_I2_001.fastq.gz',
+        '../original_data/H1_Meso_D3_FACS_ATAC_S1_R1_001.fastq.gz',
+        '../original_data/H1_Meso_D3_FACS_ATAC_S1_R2_001.fastq.gz'
+    shell:
+        ''' wget -nc -P ../original_data -i {input}
+        '''
+
+rule getGenomeSize:
+    input:
+        config['chromap_fa']
+    output:
+        'genome.sizes'
+    shell:
+        ''' faSize -detailed {input} | sort -k1,1 -k2,2n > {output}
+        '''
+
+rule prepareCellBarcodeFq:
+    input:
+        i1='../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_I1_001.fastq.gz',
+        i2='../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_I2_001.fastq.gz'
+    output:
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_cb.fq.gz'
+    shell:
+        ''' ../../../scripts/prepare_cb_fq.py {input.i1} {input.i2} | \
+            gzip > {output}
+        '''
+
+rule chromap:
+    input:
+        r1='../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_R1_001.fastq.gz',
+        r2='../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_S4_R2_001.fastq.gz',
+        cb='../original_data/Mix_HEK293T_NIH3T3_FACS_ATAC_cb.fq.gz',
+        wl='../Mix_HEK293T_NIH3T3_FACS_ATAC_whitelist.txt'
+    output:
+        'outs/fragments.tsv.gz',
+        'outs/fragments.tsv.gz.tbi'
+    log:
+        'logs/chromap.err'
+    params:
+        idx=config['chromap_idx'],
+        fa=config['chromap_fa']
+    threads: 40
+    shell:
+        ''' chromap -t {threads} --preset atac -x {params.idx} -r {params.fa} \
+            -1 {input.r1} -2 {input.r2} -b {input.cb} \
+            --barcode-whitelist {input.wl} \
+            -o outs/fragments.tsv 2> {log}
+            bgzip outs/fragments.tsv && tabix -p bed outs/fragments.tsv.gz
+        '''
+
+rule fragToReads:
+    input:
+        frag='outs/fragments.tsv.gz',
+        gs='genome.sizes'
+    output:
+        met='outs/per_cell_barcode_total_fragment_count.tsv',
+        bed='outs/reads.bed.gz'
+    shell:
+        ''' ../../../scripts/convert_frag_to_reads.py | \
+            bedClip stdin {input.gs} stdout | \
+            sort -k1,1 -k2,2n | \
+            gzip > {output.bed}
+        '''
+
+rule peakCalling:
+    input:
+        'outs/reads.bed.gz'
+    output:
+        'macs2_pk/aggregate_peaks.narrowPeak'
+    log:
+        'logs/macs2.err'
+    params:
+        gs=config['macs2_gsize'],
+        broad=config['macs2_bpk'],
+        fmt=config['macs2_format'],
+        shift=config['macs2_shift']
+    shell:
+        ''' macs2 callpeak -t {input} -g {params.gs} {params.broad} \
+            -f {params.fmt} {params.shift} --keep-dup all \
+            -B --SPMR --outdir macs2_pk -n aggregate \
+            2> {log}
+        '''
+
+rule formatPeak:
+    input:
+        npk='macs2_pk/aggregate_peaks.narrowPeak',
+        bdt=config['bedtools_bin']
+    output:
+        'macs2_pk/aggregate_peaks_formatted.bed'
+    shell:
+        ''' cut -f 1-4 {input.npk} | \
+            sed '/chrM/d' | \
+            sort -k1,1 -k2,2n > {output}
+        '''
+
+rule prepareReadPeaksOVs:
+    input:
+        bdt=config['bedtools_bin'],
+        reads='outs/reads.bed.gz',
+        peaks='macs2_pk/aggregate_peaks_formatted.bed',
+        gsize='genome.sizes'
+    output:
+        'outs/peak_read_ov.tsv.gz'
+    shell:
+        ''' {input.bdt} intersect -a {input.peaks} -b {input.reads} \
+            -wo -sorted -g {input.gsize} | sort -k8,8 | \
+            {input.bdt} groupby -g 8 -c 4 -o freqdesc | gzip > {output}
+        '''
+
+rule generate10xStyleOutput1:
+    input:
+         peaks='macs2_pk/aggregate_peaks_formatted.bed',
+         ov='outs/peak_read_ov.tsv.gz'
+    output:
+        bc='outs/raw_mtx/barcodes.tsv',
+        pk='outs/raw_mtx/peaks.bed'
+    shell:
+        ''' cut -f 1-3 {input.peaks} > {output.pk}
+            zcat {input.ov} | cut -f 1 > {output.bc}
+        '''
+
+rule generate10xStyleOutput2:
+    input:
+        ov='outs/peak_read_ov.tsv.gz',
+        bc='outs/raw_mtx/barcodes.tsv',
+        peaks='macs2_pk/aggregate_peaks_formatted.bed'
+    output:
+        'outs/raw_mtx/matrix.mtx'
+    script:
+        '../../../scripts/generate_csc_mtx.py'
+
+rule checkNumReadsSpecies:
+    input:
+        'outs/fragments.tsv.gz'
+    output:
+        hs='outs/per_cell_barcode_total_fragment_count_GRCh38.tsv',
+        mm='outs/per_cell_barcode_total_fragment_count_mm10.tsv'
+    shell:
+        ''' zcat {input} | grep GRCh38 | cut -f 4 | sort | uniq -c | \
+            awk 'BEGIN{{OFS="\t"}}{{print $1, $2}}' > {output.hs}
+            zcat {input} | grep mm10 | cut -f 4 | sort | uniq -c | \
+            awk 'BEGIN{{OFS="\t"}}{{print $1, $2}}' > {output.mm}
+        '''
+
+rule getFragmentSizeDistribution:
+    input:
+        'outs/fragments.tsv.gz'
+    output:
+        hs='outs/fragment_size_distribution_GRCh38.tsv',
+        mm='outs/fragment_size_distribution_mm10.tsv'
+    shell:
+        ''' echo -e "size\tcount" > {output.hs}
+            zcat {input} | sed '/^#/d' | grep GRCh38 | awk '{{print $3-$2}}' | \
+            sort | uniq -c | sort -b -k2,2n | \
+            awk 'BEGIN{{OFS="\t"}}{{print $2, $1}}' >> {output.hs}
+            echo -e "size\tcount" > {output.mm}
+            zcat {input} | sed '/^#/d' | grep mm10 | awk '{{print $3-$2}}' | \
+            sort | uniq -c | sort -b -k2,2n | \
+            awk 'BEGIN{{OFS="\t"}}{{print $2, $1}}' >> {output.mm}
+        '''

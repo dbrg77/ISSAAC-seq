@@ -1,0 +1,180 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        expand('{rep}/{mod}/fastq/mCortex_{rep}_Droplet_{mod}_S1_L001_{rd}_001.fastq.gz',
+               rep=['rep1', 'rep2'], mod=['ATAC', 'RNA'], rd=['R1', 'R2', 'I2']),
+        expand('{rep}/ATAC/renamed_fq/mCortex_{rep}_Droplet_ATAC_S1_L001_{rd}_001.fastq.gz',
+               rep=['rep1', 'rep2'], rd=['R1', 'R2', 'R3']),
+        expand('{rep}/RNA/fastq/mCortex_{rep}_Droplet_RNA_S1_L001_CB_UMI.fastq.gz',
+               rep=['rep1', 'rep2']),
+        expand('{rep}/RNA/outs/Aligned.sortedByCoord.out.bam', rep=['rep1', 'rep2']),
+        expand('{rep}/RNA/outs/Solo.out/Gene/filtered/barcodes.tsv', rep=['rep1', 'rep2']),
+        expand('{rep}/RNA/outs/Solo.out/Gene/filtered/features.tsv', rep=['rep1', 'rep2']),
+        expand('{rep}/RNA/outs/Solo.out/Gene/filtered/matrix.mtx', rep=['rep1', 'rep2']),
+        expand('{rep}/ATAC/cellranger-atac_done_stamp.txt', rep=['rep1', 'rep2']),
+        'atac_library_info.csv',
+        'cellranger-atac_aggregate_done_stamp.txt',
+        'analysis_pipe_out/allen_mCortex.rds',
+        'analysis_pipe_out/mCortex_all_expression_matrix.csv',
+        'analysis_pipe_out/mCortex_all_RNA_UMAP_coordinates.csv',
+        'analysis_pipe_out/mCortex_all_diff_genes_wilcox_r1.0.csv',
+        'analysis_pipe_out/mCortex_all_ATAC_UMAP_coordinates.csv',
+        'analysis_pipe_out/mCortex_all_diff_peaks_LR_r1.0.csv',
+        'analysis_pipe_out/mCortex_all.final.rds',
+        'analysis_pipe_out/mCortex_all_metadata.csv',
+        'analysis_pipe_out/mCortex_all_OPC_to_Oligo_peudotime_information.csv',
+        'analysis_pipe_out/mCortex_all_OPC_to_Oligo_cor_gene_expression_pseudotime.csv',
+        'analysis_pipe_out/mCortex_all_OPC_to_Oligo_cor_gene_activity_score_pseudotime.csv'
+
+
+rule downloadFromEBI:
+    input:
+        expand('fq_url_{rep}_{mod}.txt', rep=['rep1', 'rep2'], mod=['ATAC', 'RNA'])
+    output:
+        expand('{rep}/{mod}/fastq/mCortex_{rep}_Droplet_{mod}_S1_L001_{rd}_001.fastq.gz',
+               rep=['rep1', 'rep2'], mod=['ATAC', 'RNA'], rd=['R1', 'R2', 'I2'])
+    shell:
+        ''' wget -nc -P rep1/ATAC/fastq -i fq_url_rep1_ATAC.txt
+            wget -nc -P rep2/ATAC/fastq -i fq_url_rep2_ATAC.txt
+            wget -nc -P rep1/RNA/fastq -i fq_url_rep1_RNA.txt
+            wget -nc -P rep2/RNA/fastq -i fq_url_rep2_RNA.txt
+        '''
+
+rule prepareCBUMI:
+    input:
+        umi='{rep}/RNA/fastq/mCortex_{rep}_Droplet_RNA_S1_L001_R2_001.fastq.gz',
+        cb='{rep}/RNA/fastq/mCortex_{rep}_Droplet_RNA_S1_L001_I2_001.fastq.gz'
+    output:
+        '{rep}/RNA/fastq/mCortex_{rep}_Droplet_RNA_S1_L001_CB_UMI.fastq.gz'
+    shell:
+        ''' paste <(zcat {input.cb}) <(zcat {input.umi}) | \
+            awk -F '\t' '{{if(NR%4==1||NR%4==3) {{print $1}} if(NR%4==2||NR%4==0) {{print $1 substr($2,1,10)}} }}' | \
+            gzip > {output}
+        '''
+
+rule star:
+    input:
+        pg=config['star_bin'],
+        cdna='{rep}/RNA/fastq/mCortex_{rep}_Droplet_RNA_S1_L001_R1_001.fastq.gz',
+        cb='{rep}/RNA/fastq/mCortex_{rep}_Droplet_RNA_S1_L001_CB_UMI.fastq.gz',
+        wl='737K-cratac-v1_rc.txt'
+    output:
+        '{rep}/RNA/outs/Aligned.sortedByCoord.out.bam',
+        '{rep}/RNA/outs/Solo.out/Gene/filtered/barcodes.tsv',
+        '{rep}/RNA/outs/Solo.out/Gene/filtered/features.tsv',
+        '{rep}/RNA/outs/Solo.out/Gene/filtered/matrix.mtx'
+    params:
+        idx=config['star_idx']
+    threads: 40
+    shell:
+        ''' {input.pg} --genomeDir {params.idx} --outFileNamePrefix {wildcards.rep}/RNA/outs/ \
+            --readFilesCommand zcat --readFilesIn {input.cdna} {input.cb} \
+            --soloCBstart 1 --soloCBlen 16 --soloUMIstart 17 --soloUMIlen 10 \
+            --soloType CB_UMI_Simple --clip3pNbases 116 \
+            --soloCBwhitelist {input.wl} \
+            --soloCellFilter EmptyDrops_CR --runThreadN {threads} \
+            --outSAMattributes CB UB --outSAMtype BAM SortedByCoordinate
+        '''
+
+rule renameFq:
+    input:
+        cb='{rep}/ATAC/fastq/mCortex_{rep}_Droplet_ATAC_S1_L001_I2_001.fastq.gz',
+        r1='{rep}/ATAC/fastq/mCortex_{rep}_Droplet_ATAC_S1_L001_R1_001.fastq.gz',
+        r2='{rep}/ATAC/fastq/mCortex_{rep}_Droplet_ATAC_S1_L001_R2_001.fastq.gz'
+    output:
+        r1='{rep}/ATAC/renamed_fq/mCortex_{rep}_Droplet_ATAC_S1_L001_R1_001.fastq.gz',
+        r2='{rep}/ATAC/renamed_fq/mCortex_{rep}_Droplet_ATAC_S1_L001_R2_001.fastq.gz',
+        r3='{rep}/ATAC/renamed_fq/mCortex_{rep}_Droplet_ATAC_S1_L001_R3_001.fastq.gz'
+    shell:
+        ''' ln -s ../fastq/mCortex_{wildcards.rep}_Droplet_ATAC_S1_L001_R1_001.fastq.gz {output.r1}
+            ln -s ../fastq/mCortex_{wildcards.rep}_Droplet_ATAC_S1_L001_I2_001.fastq.gz {output.r2}
+            ln -s ../fastq/mCortex_{wildcards.rep}_Droplet_ATAC_S1_L001_R2_001.fastq.gz {output.r3}
+        '''
+
+rule cellRangerAtac:
+    input:
+        r1='{rep}/ATAC/renamed_fq/mCortex_{rep}_Droplet_ATAC_S1_L001_R1_001.fastq.gz',
+        r2='{rep}/ATAC/renamed_fq/mCortex_{rep}_Droplet_ATAC_S1_L001_R2_001.fastq.gz',
+        r3='{rep}/ATAC/renamed_fq/mCortex_{rep}_Droplet_ATAC_S1_L001_R3_001.fastq.gz',
+        pg=config['cellranger_atac_bin'],
+        ref=config['cellranger_atac_ref']
+    output:
+        '{rep}/ATAC/cellranger-atac_done_stamp.txt'
+    log:
+        stdout='{rep}/ATAC/cellranger-atac.out',
+        stderr='{rep}/ATAC/cellranger-atac.err'
+    threads: 80
+    shell:
+        ''' cd {wildcards.rep}/ATAC
+            {input.pg} count --id cellranger-atac_results \
+            --reference {input.ref} \
+            --fastqs ./renamed_fq/ \
+            --localcores {threads} \
+            1> cellranger-atac.out 2> cellranger-atac.err
+            touch cellranger-atac_done_stamp.txt
+        '''
+
+rule getLibraryInfoFile:
+    input:
+        'rep1/ATAC/cellranger-atac_done_stamp.txt',
+        'rep2/ATAC/cellranger-atac_done_stamp.txt'
+    output:
+        'atac_library_info.csv'
+    shell:
+        ''' echo "library_id,fragments,cells" > {output}
+            path_prefix=$(pwd)
+            echo "mCortex_rep1,${{path_prefix}}/rep1/ATAC/cellranger-atac_results/outs/fragments.tsv.gz,${{path_prefix}}/rep1/ATAC/cellranger-atac_results/outs/singlecell.csv" >> {output}
+            echo "mCortex_rep2,${{path_prefix}}/rep2/ATAC/cellranger-atac_results/outs/fragments.tsv.gz,${{path_prefix}}/rep2/ATAC/cellranger-atac_results/outs/singlecell.csv" >> {output}
+        '''
+
+rule aggregateATAC:
+    input:
+        pg=config['cellranger_atac_bin'],
+        ref=config['cellranger_atac_ref'],
+        met='atac_library_info.csv'
+    output:
+        'cellranger-atac_aggregate_done_stamp.txt'
+    log:
+        stdout='cellranger-atac_aggregate.out',
+        stderr='cellranger-atac_aggregate.err'
+    threads: 40
+    shell:
+        ''' {input.pg} aggr \
+            --id=mCortex_ATAC_aggr \
+            --csv={input.met} \
+            --normalize=depth \
+            --reference={input.ref} \
+            --localcores {threads} \
+            1> {log.stdout} 2> {log.stderr}
+            touch {output}
+        '''
+
+rule getAllenDataFromSignac:
+    output:
+        'analysis_pipe_out/allen_mCortex.rds'
+    shell:
+        ''' wget -nc -O {output} https://signac-objects.s3.amazonaws.com/allen_brain.rds
+        '''
+
+rule prelimAnalysis:
+    input:
+        'cellranger-atac_aggregate_done_stamp.txt',
+        'rep1/RNA/outs/Aligned.sortedByCoord.out.bam',
+        'rep2/RNA/outs/Aligned.sortedByCoord.out.bam',
+        'analysis_pipe_out/allen_mCortex.rds'
+    output:
+        'analysis_pipe_out/mCortex_all_expression_matrix.csv',
+        'analysis_pipe_out/mCortex_all_RNA_UMAP_coordinates.csv',
+        'analysis_pipe_out/mCortex_all_diff_genes_wilcox_r1.0.csv',
+        'analysis_pipe_out/mCortex_all_ATAC_UMAP_coordinates.csv',
+        'analysis_pipe_out/mCortex_all_diff_peaks_LR_r1.0.csv',
+        'analysis_pipe_out/mCortex_all.final.rds',
+        'analysis_pipe_out/mCortex_all_metadata.csv',
+        'analysis_pipe_out/mCortex_all_OPC_to_Oligo_peudotime_information.csv',
+        'analysis_pipe_out/mCortex_all_OPC_to_Oligo_cor_gene_expression_pseudotime.csv',
+        'analysis_pipe_out/mCortex_all_OPC_to_Oligo_cor_gene_activity_score_pseudotime.csv'
+    shell:
+        ''' Rscript mCortex_analysis.R
+        '''
+

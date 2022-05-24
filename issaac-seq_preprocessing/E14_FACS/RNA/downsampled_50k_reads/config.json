@@ -1,0 +1,4 @@
+{
+    "star_bin" : "/work/bio-chenx/tools/STAR-2.7.9a/bin/Linux_x86_64/STAR",
+    "star_idx" : "/data/bio-chenx/reference/mus_musculus/refdata-gex-mm10-2020-A/star_2.7.9a"
+}

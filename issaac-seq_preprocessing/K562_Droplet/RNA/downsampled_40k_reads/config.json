@@ -1,0 +1,4 @@
+{
+    "star_bin" : "/work/bio-chenx/tools/STAR-2.7.9a/bin/Linux_x86_64/STAR",
+    "star_idx" : "/work/bio-chenx/reference/homo_sapiens/refdata-gex-GRCh38-2020-A/star_2.7.9a"
+}

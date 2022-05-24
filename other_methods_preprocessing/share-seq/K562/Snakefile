@@ -1,0 +1,93 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        'ATAC/raw/barcodes.tsv',
+        'ATAC/raw/matrix.mtx',
+        'ATAC/raw/features.tsv',
+        'ATAC/filtered/barcodes.tsv',
+        'ATAC/filtered/matrix.mtx',
+        'ATAC/filtered/features.tsv',
+        'ATAC/filtered/metrics.csv',
+        'RNA/raw/barcodes.tsv',
+        'RNA/raw/matrix.mtx',
+        'RNA/raw/features.tsv',
+        'RNA/filtered/barcodes.tsv',
+        'RNA/filtered/matrix.mtx',
+        'RNA/filtered/features.tsv',
+        'RNA/filtered/metrics.csv'
+
+# download matrices from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140203
+rule getATAC:
+    output:
+        bc='ATAC/raw/barcodes.tsv',
+        mtx='ATAC/raw/matrix.mtx',
+        pk='ATAC/raw/features.tsv'
+    shell:
+        ''' curl 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4156595&format=file&file=GSM4156595%5FK562%2ERaw%2Ehg19%2Ebarcodes%2Etxt%2Egz' --output /dev/stdout | gunzip > {output.bc}
+            curl 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4156595&format=file&file=GSM4156595%5FK562%2ERaw%2Ehg19%2Ecounts%2Etxt%2Egz' --output /dev/stdout | gunzip > {output.mtx}
+            curl 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4156595&format=file&file=GSM4156595%5FK562%2ERaw%2Ehg19%2Epeaks%2Ebed%2Egz' --output /dev/stdout | gunzip > {output.pk}
+        '''
+
+rule getRNA:
+    output:
+        'RNA/raw/barcodes.tsv',
+        'RNA/raw/matrix.mtx',
+        'RNA/raw/features.tsv'
+    shell:
+        ''' curl 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4156606&format=file&file=GSM4156606%5FK562%2ERaw%2Erna%2Ehg19%2Ecounts%2Etxt%2Egz' --output /dev/stdout | gunzip | ../../scripts/get_mtx.py - RNA/raw
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule filterCellATAC:
+    input:
+        pg=config['star_bin'],
+        bc='ATAC/raw/barcodes.tsv',
+        mtx='ATAC/raw/matrix.mtx',
+        pk='ATAC/raw/features.tsv'
+    output:
+        'ATAC/filtered/barcodes.tsv',
+        'ATAC/filtered/matrix.mtx',
+        'ATAC/filtered/features.tsv'
+    shell:
+        ''' num_abc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            aidx=$(echo "${{num_abc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            ATAC/raw ATAC/filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{aidx}} ${{num_abc}} 200 0.01 20000 0.01 10000
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule filterCellRNA:
+    input:
+        pg=config['star_bin'],
+        bc='RNA/raw/barcodes.tsv',
+        mtx='RNA/raw/matrix.mtx',
+        ft='RNA/raw/features.tsv'
+    output:
+        'RNA/filtered/barcodes.tsv',
+        'RNA/filtered/matrix.mtx',
+        'RNA/filtered/features.tsv'
+    shell:
+        ''' num_rbc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            ridx=$(echo "${{num_rbc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            RNA/raw RNA/filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{ridx}} ${{num_rbc}} 200 0.01 20000 0.01 10000
+        '''
+
+rule getMetrics:
+    input:
+        abc='ATAC/filtered/barcodes.tsv',
+        amtx='ATAC/filtered/matrix.mtx',
+        rbc='RNA/filtered/barcodes.tsv',
+        rmtx='RNA/filtered/matrix.mtx'
+    output:
+        atac='ATAC/filtered/metrics.csv',
+        rna='RNA/filtered/metrics.csv'
+    shell:
+        ''' ../../scripts/output_qc_mtx {input.amtx} {input.abc} {output.atac}
+            ../../scripts/output_qc_mtx {input.rmtx} {input.rbc} {output.rna}
+        '''

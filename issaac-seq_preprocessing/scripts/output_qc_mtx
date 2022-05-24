@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import sys
+import numpy as np
+import pandas as pd
+
+mtx = pd.read_csv(sys.argv[1], sep=' ', comment='%')
+cell_name = {}
+
+for i,j in enumerate(open(sys.argv[2])):
+    cell_name[i+1] = j.strip()
+
+mtx.columns = ['row', 'col', 'count']
+
+print('Median counts: %s' % np.median(mtx.groupby('col').sum()['count'].values))
+print('Median features: %s' % np.median(mtx['col'].value_counts().values))
+print('Number of columns (cells): %s' % len(mtx.groupby('col').sum()['count'].values))
+
+out = pd.concat([mtx.groupby('col').sum()['count'], mtx['col'].value_counts()], axis=1)
+out.columns = ['nCounts', 'nFeatures']
+out.rename(index = cell_name, inplace=True)
+out.to_csv(sys.argv[3], index_label='cell')

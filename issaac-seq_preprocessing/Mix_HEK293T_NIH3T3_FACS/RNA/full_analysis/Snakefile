@@ -1,0 +1,75 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_I1_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_I2_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_R1_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_R2_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_CB_UMI.fastq.gz',
+        'outs/Aligned.sortedByCoord.out.bam',
+        'outs/per_cell_barcode_total_read_count_GRCh38.tsv',
+        'outs/per_cell_barcode_total_read_count_mm10.tsv'
+
+rule downloadFromEBI:
+    input:
+        '../fq_url.txt'
+    output:
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_I1_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_I2_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_R1_001.fastq.gz',
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_R2_001.fastq.gz'
+    shell:
+        ''' wget -nc -P ../original_data -i {input}
+        '''
+
+rule prepareCBUMI:
+    input:
+        i1='../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_I1_001.fastq.gz',
+        i2='../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_I2_001.fastq.gz',
+        umi='../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_R1_001.fastq.gz'
+    output:
+        '../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_CB_UMI.fastq.gz'
+    shell:
+        ''' ../../../scripts/collect_cb_umi_issaac_plate.py \
+            {input.i1} {input.i2} {input.umi} | \
+            gzip > {output}
+        '''
+
+rule star:
+    input:
+        pg=config['star_bin'],
+        cdna='../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_R2_001.fastq.gz',
+        cb='../original_data/Mix_HEK293T_NIH3T3_FACS_RNA_S3_CB_UMI.fastq.gz',
+        wl='../Mix_HEK293T_NIH3T3_FACS_RNA_whitelist.txt'
+    output:
+        'outs/Aligned.sortedByCoord.out.bam'
+    params:
+        idx=config['star_idx']
+    threads: 40
+    shell:
+        ''' {input.pg} --genomeDir {params.idx} --outFileNamePrefix ./outs/ \
+            --readFilesCommand zcat --readFilesIn {input.cdna} {input.cb} \
+            --soloCBstart 1 --soloCBlen 16 --soloUMIstart 17 --soloUMIlen 10 \
+            --soloType CB_UMI_Simple --clip3pNbases 3 \
+            --soloCBwhitelist {input.wl} \
+            --soloCellFilter EmptyDrops_CR --runThreadN {threads} \
+            --outSAMattributes CB UB --outSAMtype BAM SortedByCoordinate
+        '''
+
+rule checkNumReadsSpecies:
+    input:
+        'outs/Aligned.sortedByCoord.out.bam'
+    output:
+        hs='outs/per_cell_barcode_total_read_count_GRCh38.tsv',
+        mm='outs/per_cell_barcode_total_read_count_mm10.tsv'
+    shell:
+        ''' samtools view -q 30 -F 3844 {input} | \
+            grep GRCh38 | grep -oP 'CB:Z:[ACGT]{{16}}' | \
+            cut -f 3 -d ':' | sort | uniq -c  | \
+            awk 'BEGIN{{OFS="\t"}}{{print $1, $2}}' > {output.hs}
+            samtools view -q 30 -F 3844 {input} | \
+            grep mm10 | grep -oP 'CB:Z:[ACGT]{{16}}' | \
+            cut -f 3 -d ':' | sort | uniq -c  | \
+            awk 'BEGIN{{OFS="\t"}}{{print $1, $2}}' > {output.mm}
+        '''

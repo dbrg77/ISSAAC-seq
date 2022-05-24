@@ -1,0 +1,67 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        'SRR13716274.sra',
+        'SRR13716274_1.fastq.gz',
+        'SRR13716274_2.fastq.gz',
+        'outs/Solo.out/Gene/filtered/barcodes.tsv',
+        'outs/Solo.out/Gene/filtered/features.tsv',
+        'outs/Solo.out/Gene/filtered/matrix.mtx',
+        'outs/Aligned.sortedByCoord.out.bam',
+        'outs/Solo.out/Gene/filtered/metrics.csv'
+
+rule downloadSra:
+    output:
+        'SRR13716274.sra'
+    shell:
+        ''' prefetch SRR13716274 -o ./SRR13716274.sra
+        '''
+
+rule dumpFastq:
+    input:
+        'SRR13716274.sra'
+    output:
+        'SRR13716274_1.fastq.gz',
+        'SRR13716274_2.fastq.gz'
+    threads: 8
+    shell:
+        ''' fasterq-dump --split-3 -e {threads} {input}
+            gzip SRR13716274_1.fastq
+            gzip SRR13716274_2.fastq
+       '''
+
+rule star:
+    input:
+        pg=config['star_bin'],
+        cdna='SRR13716274_2.fastq.gz',
+        cb='SRR13716274_1.fastq.gz',
+        wl='../../gex_737K-arc-v1.txt'
+    output:
+        'outs/Solo.out/Gene/filtered/barcodes.tsv',
+        'outs/Solo.out/Gene/filtered/features.tsv',
+        'outs/Solo.out/Gene/filtered/matrix.mtx',
+        'outs/Aligned.sortedByCoord.out.bam'
+    params:
+        idx=config['star_idx']
+    threads: 40
+    shell:
+        ''' {input.pg} --genomeDir {params.idx} --outFileNamePrefix ./outs/ \
+            --readFilesCommand zcat --readFilesIn {input.cdna} {input.cb} \
+            --soloCBstart 1 --soloCBlen 16 --soloUMIstart 17 --soloUMIlen 12 \
+            --soloBarcodeReadLength 0 --soloType CB_UMI_Simple --clip3pNbases 56 \
+            --soloCBwhitelist {input.wl} \
+            --soloCellFilter EmptyDrops_CR --runThreadN {threads} \
+            --outSAMattributes CB UB --outSAMtype BAM SortedByCoordinate \
+            --limitBAMsortRAM 85956566919
+        '''
+
+rule getMetrics:
+    input:
+        bc='outs/Solo.out/Gene/filtered/barcodes.tsv',
+        mtx='outs/Solo.out/Gene/filtered/matrix.mtx'
+    output:
+        'outs/Solo.out/Gene/filtered/metrics.csv'
+    shell:
+        ''' ../../../scripts/output_qc_mtx {input.mtx} {input.bc} {output}
+        '''

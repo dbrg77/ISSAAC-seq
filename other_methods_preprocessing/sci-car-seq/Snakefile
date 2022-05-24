@@ -1,0 +1,123 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        'tar_file/GSE117089_RAW.tar',
+        'tar_file/GSM3271040_RNA_sciCAR_A549_cell.txt.gz',
+        'tar_file/GSM3271040_RNA_sciCAR_A549_gene.txt.gz',
+        'tar_file/GSM3271040_RNA_sciCAR_A549_gene_count.txt.gz',
+        'tar_file/GSM3271041_ATAC_sciCAR_A549_cell.txt.gz',
+        'tar_file/GSM3271041_ATAC_sciCAR_A549_peak.txt.gz',
+        'tar_file/GSM3271041_ATAC_sciCAR_A549_peak_count.txt.gz',
+        'RNA/raw/barcodes.tsv',
+        'RNA/raw/features.tsv',
+        'RNA/raw/matrix.mtx',
+        'ATAC/raw/barcodes.tsv',
+        'ATAC/raw/features.tsv',
+        'ATAC/raw/matrix.mtx',
+        'RNA/filtered/barcodes.tsv',
+        'RNA/filtered/features.tsv',
+        'RNA/filtered/matrix.mtx',
+        'ATAC/filtered/barcodes.tsv',
+        'ATAC/filtered/features.tsv',
+        'ATAC/filtered/matrix.mtx',
+        'RNA/filtered/metrics.csv',
+        'ATAC/filtered/metrics.csv'
+
+rule downloadData:
+    output:
+        'tar_file/GSE117089_RAW.tar'
+    shell:
+        ''' wget 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE117089&format=file' \
+            -O {output}
+        '''
+
+rule extract:
+    input:
+        'tar_file/GSE117089_RAW.tar'
+    output:
+        'tar_file/GSM3271040_RNA_sciCAR_A549_cell.txt.gz',
+        'tar_file/GSM3271040_RNA_sciCAR_A549_gene.txt.gz',
+        'tar_file/GSM3271040_RNA_sciCAR_A549_gene_count.txt.gz',
+        'tar_file/GSM3271041_ATAC_sciCAR_A549_cell.txt.gz',
+        'tar_file/GSM3271041_ATAC_sciCAR_A549_peak.txt.gz',
+        'tar_file/GSM3271041_ATAC_sciCAR_A549_peak_count.txt.gz'
+    shell:
+        ''' tar xf {input} -C tar_file
+        '''
+
+rule prepareFiles:
+    input:
+        rbc='tar_file/GSM3271040_RNA_sciCAR_A549_cell.txt.gz',
+        rft='tar_file/GSM3271040_RNA_sciCAR_A549_gene.txt.gz',
+        rct='tar_file/GSM3271040_RNA_sciCAR_A549_gene_count.txt.gz',
+        abc='tar_file/GSM3271041_ATAC_sciCAR_A549_cell.txt.gz',
+        aft='tar_file/GSM3271041_ATAC_sciCAR_A549_peak.txt.gz',
+        act='tar_file/GSM3271041_ATAC_sciCAR_A549_peak_count.txt.gz'
+    output:
+        rbc='RNA/raw/barcodes.tsv',
+        rft='RNA/raw/features.tsv',
+        rct='RNA/raw/matrix.mtx',
+        abc='ATAC/raw/barcodes.tsv',
+        aft='ATAC/raw/features.tsv',
+        act='ATAC/raw/matrix.mtx',
+    shell:
+        ''' zcat {input.rbc} | tail -n +2 > {output.rbc}
+            zcat {input.rft} | tail -n +2 > {output.rft}
+            zcat {input.rct} > {output.rct}
+            zcat {input.abc} | tail -n +2 > {output.abc}
+            zcat {input.aft} | tail -n +2 > {output.aft}
+            zcat {input.act} > {output.act}
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule filterCellATAC:
+    input:
+        pg=config['star_bin'],
+        bc='ATAC/raw/barcodes.tsv',
+        mtx='ATAC/raw/matrix.mtx',
+        pk='ATAC/raw/features.tsv'
+    output:
+        'ATAC/filtered/barcodes.tsv',
+        'ATAC/filtered/matrix.mtx',
+        'ATAC/filtered/features.tsv'
+    shell:
+        ''' num_abc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            aidx=$(echo "${{num_abc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            ATAC/raw ATAC/filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+            3000 0.99 10 ${{aidx}} ${{num_abc}} 200 0.01 20000 0.01 10000
+        '''
+
+# use the last 10% of barcodes to definte emptydrops
+rule filterCellRNA:
+    input:
+        pg=config['star_bin'],
+        bc='RNA/raw/barcodes.tsv',
+        mtx='RNA/raw/matrix.mtx',
+        ft='RNA/raw/features.tsv'
+    output:
+        'RNA/filtered/barcodes.tsv',
+        'RNA/filtered/matrix.mtx',
+        'RNA/filtered/features.tsv'
+    shell:
+        ''' num_rbc=$(wc -l {input.bc} | cut -f 1 -d ' ')
+            ridx=$(echo "${{num_rbc}}*0.9" | bc | cut -f 1 -d '.')
+            {input.pg} --runMode soloCellFiltering \
+            RNA/raw RNA/filtered/ \
+            --soloCellFilter EmptyDrops_CR \
+             3000 0.99 10 ${{ridx}} ${{num_rbc}} 200 0.01 20000 0.01 10000
+        '''
+
+rule getMetrics:
+    input:
+        'ATAC/filtered/matrix.mtx',
+        'RNA/filtered/matrix.mtx'
+    output:
+        'ATAC/filtered/metrics.csv',
+        'RNA/filtered/metrics.csv'
+    shell:
+        ''' ../scripts/output_qc_mtx ATAC/filtered/matrix.mtx ATAC/filtered/metrics.csv
+            ../scripts/output_qc_mtx RNA/filtered/matrix.mtx RNA/filtered/metrics.csv
+        '''

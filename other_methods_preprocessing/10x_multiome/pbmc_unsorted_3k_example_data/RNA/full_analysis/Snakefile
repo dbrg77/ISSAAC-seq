@@ -1,0 +1,134 @@
+configfile: 'config.json'
+
+rule all:
+    input:
+        '../../pbmc_unsorted_3k_fastqs.tar',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_I2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_I2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_R2_001.fastq.gz',
+        '../original_data/pbmc_unsorted_3k_S01_L003_R1_001.fastq.gz',
+        '../original_data/pbmc_unsorted_3k_S01_L003_R2_001.fastq.gz',
+        '../original_data/pbmc_unsorted_3k_S01_L004_R1_001.fastq.gz',
+        '../original_data/pbmc_unsorted_3k_S01_L004_R2_001.fastq.gz',
+        'outs/Solo.out/Gene/filtered/barcodes.tsv',
+        'outs/Solo.out/Gene/filtered/features.tsv',
+        'outs/Solo.out/Gene/filtered/matrix.mtx',
+        'outs/Aligned.sortedByCoord.out.bam',
+        'outs/Solo.out/Gene/filtered/metrics.csv'
+
+rule downloadFrom10XG:
+    input:
+        '../../fq_url.txt'
+    output:
+        '../../pbmc_unsorted_3k_fastqs.tar'
+    shell:
+        ''' wget -nc -P ../../ -i {input}
+        '''
+
+rule extractFiles:
+    input:
+        '../../pbmc_unsorted_3k_fastqs.tar'
+    output:
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L001_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L002_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L003_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/atac/pbmc_unsorted_3k_S3_L004_R3_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_I2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_R2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_I1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_I2_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_R1_001.fastq.gz',
+        '../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_R2_001.fastq.gz',
+    shell:
+        ''' tar xvf {input} -C ../../
+        '''
+
+rule collectRNAFiles:
+    input:
+        l3r1='../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_R1_001.fastq.gz',
+        l3r2='../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L003_R2_001.fastq.gz',
+        l4r1='../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_R1_001.fastq.gz',
+        l4r2='../../pbmc_unsorted_3k/gex/pbmc_unsorted_3k_S01_L004_R2_001.fastq.gz'
+    output:
+        l3r1='../original_data/pbmc_unsorted_3k_S01_L003_R1_001.fastq.gz',
+        l3r2='../original_data/pbmc_unsorted_3k_S01_L003_R2_001.fastq.gz',
+        l4r1='../original_data/pbmc_unsorted_3k_S01_L004_R1_001.fastq.gz',
+        l4r2='../original_data/pbmc_unsorted_3k_S01_L004_R2_001.fastq.gz'
+    shell:
+        ''' ln -s {input.l3r1} {output.l3r1}
+            ln -s {input.l3r2} {output.l3r2}
+            ln -s {input.l4r1} {output.l4r1}
+            ln -s {input.l4r2} {output.l4r2}
+        '''
+
+rule star:
+    input:
+        pg=config['star_bin'],
+        l3r1='../original_data/pbmc_unsorted_3k_S01_L003_R1_001.fastq.gz',
+        l3r2='../original_data/pbmc_unsorted_3k_S01_L003_R2_001.fastq.gz',
+        l4r1='../original_data/pbmc_unsorted_3k_S01_L004_R1_001.fastq.gz',
+        l4r2='../original_data/pbmc_unsorted_3k_S01_L004_R2_001.fastq.gz',
+        wl='../../../gex_737K-arc-v1.txt'
+    output:
+        'outs/Solo.out/Gene/filtered/barcodes.tsv',
+        'outs/Solo.out/Gene/filtered/features.tsv',
+        'outs/Solo.out/Gene/filtered/matrix.mtx',
+        'outs/Aligned.sortedByCoord.out.bam'
+    params:
+        idx=config['star_idx']
+    threads: 40
+    shell:
+        ''' {input.pg} --genomeDir {params.idx} --outFileNamePrefix ./outs/ \
+            --readFilesCommand zcat \
+            --readFilesIn {input.l3r2},{input.l4r2} {input.l3r1},{input.l4r1} \
+            --soloCBstart 1 --soloCBlen 16 --soloUMIstart 17 --soloUMIlen 12 \
+            --soloBarcodeReadLength 0 --soloType CB_UMI_Simple --clip3pNbases 55 \
+            --soloCBwhitelist {input.wl} \
+            --soloCellFilter EmptyDrops_CR --runThreadN {threads} \
+            --outSAMattributes CB UB --outSAMtype BAM SortedByCoordinate
+        '''
+
+rule getMetrics:
+    input:
+        bc='outs/Solo.out/Gene/filtered/barcodes.tsv',
+        mtx='outs/Solo.out/Gene/filtered/matrix.mtx'
+    output:
+        'outs/Solo.out/Gene/filtered/metrics.csv'
+    shell:
+        ''' ../../../../scripts/output_qc_mtx {input.mtx} {input.bc} {output}
+        '''

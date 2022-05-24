@@ -1,0 +1,48 @@
+rule all:
+    input:
+        'GSM5085810_GM12878_rep1_filtered_feature_bc_matrix.h5',
+        'GSM5085811_GM12878_rep1_atac_fragments.tsv.gz',
+        'GSM5085812_GM12878_rep2_filtered_feature_bc_matrix.h5',
+        'GSM5085813_GM12878_rep2_atac_fragments.tsv.gz',
+        'GM12878_rep1_metadata.csv',
+        'GM12878_rep2_metadata.csv',
+        'metrics.csv'
+
+# download matrix from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5085810
+rule downloadData:
+    output:
+        r1='GSM5085810_GM12878_rep1_filtered_feature_bc_matrix.h5',
+        frag1='GSM5085811_GM12878_rep1_atac_fragments.tsv.gz',
+        r2='GSM5085812_GM12878_rep2_filtered_feature_bc_matrix.h5',
+        frag2='GSM5085813_GM12878_rep2_atac_fragments.tsv.gz'
+    shell:
+        ''' wget -nc -c 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM5085810&format=file&file=GSM5085810%5FGM12878%5Frep1%5Ffiltered%5Ffeature%5Fbc%5Fmatrix%2Eh5' \
+            -O {output.r1}
+            wget -nc -c 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM5085811&format=file&file=GSM5085811%5FGM12878%5Frep1%5Fatac%5Ffragments%2Etsv%2Egz' \
+            -O {output.frag1}
+            wget -nc -c 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM5085812&format=file&file=GSM5085812%5FGM12878%5Frep2%5Ffiltered%5Ffeature%5Fbc%5Fmatrix%2Eh5' \
+            -O {output.r2}
+            wget -nc -c 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM5085813&format=file&file=GSM5085813%5FGM12878%5Frep2%5Fatac%5Ffragments%2Etsv%2Egz' \
+            -O {output.frag2}
+        '''
+
+rule getMetaData:
+    input:
+        'GSM5085810_GM12878_rep1_filtered_feature_bc_matrix.h5',
+        'GSM5085812_GM12878_rep2_filtered_feature_bc_matrix.h5'
+    output:
+        'GM12878_rep1_metadata.csv',
+        'GM12878_rep2_metadata.csv'
+    shell:
+        ''' ./QC.R
+        '''
+
+rule getMetrics:
+    input:
+        'GM12878_rep1_metadata.csv'
+    output:
+        'metrics.csv'
+    shell:
+        ''' echo "cell,nCounts,nFeatures" > {output}
+            cut -f 1,6,7 -d, GM12878_rep1_metadata.csv | tail -n +2 >> {output}
+        '''
