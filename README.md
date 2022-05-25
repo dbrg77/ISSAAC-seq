@@ -9,7 +9,11 @@ ISSAAC-seq is a single-cell multiomic method for simultaneous profiling of chrom
 
 ## Using ISSAAC-seq
 
-The repository contains details of the library structures and the code for the data processing and analysis. There are two ways of executing the method with small differences in terms of sample preparation and data preprocessing. Go the the [FACS](https://github.com/dbrg77/ISSAAC-seq/FACS.md) page to check the details about the plate-based workflow. Go to the [Droplet](https://github.com/dbrg77/ISSAAC-seq/Droplet.md) page to check the droplet-based workflow. In the droplet-based workflow, we used [10x Genomics Single Cell ATAC](https://www.nature.com/articles/s41587-019-0206-z) kit for the demonstration, but it should work on any system with a Tn5 capture sequence, such as [BioRad ddSEQ](https://www.nature.com/articles/s41587-019-0147-6) and [HyDrop](https://www.biorxiv.org/content/10.1101/2021.06.04.447104v1).
+The repository contains details of the library structures and the code for the data processing and analysis. There are two ways of executing the method with small differences in terms of sample preparation and data preprocessing. Go the the [FACS](https://github.com/dbrg77/ISSAAC-seq/blob/main/FACS.md) page to check the details about the plate-based workflow. Go to the [Droplet](https://github.com/dbrg77/ISSAAC-seq/blob/main/Droplet.md) page to check the droplet-based workflow. In the droplet-based workflow, we used [10x Genomics Single Cell ATAC](https://www.nature.com/articles/s41587-019-0206-z) kit for the demonstration, but it should work on any system with a Tn5 capture sequence, such as [BioRad ddSEQ](https://www.nature.com/articles/s41587-019-0147-6) and [HyDrop](https://www.biorxiv.org/content/10.1101/2021.06.04.447104v1).
+
+## Raw Sequencing Data
+
+The raw data (fastq files) are deposited into ArrayExpress under the accession number [E-MTAB-11264](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-11264/).
 
 ## Reproducing the results from the paper
 
@@ -44,19 +48,19 @@ snakemake --cores
   - scanpy (v1.9.0)
   - scikit-learn (v0.22.1)
 3. __R packages__
-  - Matrix
-  - Signac
-  - Seurat
-  - monocle
-  - GenomeInfoDb
-  - EnsDb.Mmusculus.v79
-  - EnsDb.Hsapiens.v86
-  - ggplot2
-  - patchwork
-  - dplyr
-  - stringr
-  - mgsub
-  - stringi
+  - Matrix (v1.3-3)
+  - Signac (v1.6.0)
+  - Seurat (v4.1.0)
+  - monocle (v2.20.0)
+  - GenomeInfoDb (v1.30.1)
+  - EnsDb.Mmusculus.v79 (v2.99.0)
+  - EnsDb.Hsapiens.v86 (v2.99.0)
+  - ggplot2 (v3.35)
+  - patchwork (v1.1.1)
+  - dplyr (v1.0.8)
+  - stringr (v1.4.0.9000)
+  - mgsub (v1.7.3)
+  - stringi (v1.7.6)
 4. __Other Bioinformatics Utilities__
   - chromap (0.2.1-r369)
   - MACS2 (v2.2.7.1)
