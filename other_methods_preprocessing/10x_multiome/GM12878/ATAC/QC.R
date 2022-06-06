@@ -1,4 +1,4 @@
-#! /work/bio-chenx/anaconda3/envs/r4/bin/Rscript
+#! /usr/bin/env Rscript
 
 # Load packages
 library(Signac)
