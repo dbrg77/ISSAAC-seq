@@ -1,1 +1,3 @@
-ftp://
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847064/Mix_HEK293T_NIH3T3_Droplet_RNA_S1_L001_I2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847064/Mix_HEK293T_NIH3T3_Droplet_RNA_S1_L001_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847064/Mix_HEK293T_NIH3T3_Droplet_RNA_S1_L001_R2_001.fastq.gz

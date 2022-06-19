@@ -1,0 +1,2 @@
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847032/E14_10x_Multiome_RNA_S1_L001_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847032/E14_10x_Multiome_RNA_S1_L001_R2_001.fastq.gz

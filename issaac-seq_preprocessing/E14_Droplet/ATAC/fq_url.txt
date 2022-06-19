@@ -1,1 +1,3 @@
-ftp://
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847033/E14_Droplet_ATAC_S1_L002_I2_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847033/E14_Droplet_ATAC_S1_L002_R1_001.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR984/ERR9847033/E14_Droplet_ATAC_S1_L002_R2_001.fastq.gz

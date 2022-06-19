@@ -13,7 +13,7 @@ The repository contains details of the library structures and the code for the d
 
 ## Raw Sequencing Data
 
-The raw data (fastq files) are deposited into ArrayExpress under the accession number [E-MTAB-11264](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-11264/). Note: some data are still under curation, which is not available yet but should be soon.
+The raw data (fastq files) are deposited into ArrayExpress under the accession number [E-MTAB-11264](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11264).
 
 ## Reproducing the results from the paper
 
