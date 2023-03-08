@@ -74,7 +74,7 @@ snakemake --cores
 
 ## Citation
 
-Xu W, Yang W, Zhang Y, Chen Y, Zhang Q, Wang X, Song K, Jin W\* and Chen X\* (2021) ISSAAC-seq enables sensitive and flexible multimodal profiling of chromatin accessibility and gene expression in single cells. ___bioRxiv___, [doi: 10.1101/2022.01.16.476488v1](https://www.biorxiv.org/content/10.1101/2022.01.16.476488v1)
+Xu W, Yang W, Zhang Y, Chen Y, Zhang Q, Wang X, Song K, Jin W\* and Chen X\* (2021) ISSAAC-seq enables sensitive and flexible multimodal profiling of chromatin accessibility and gene expression in single cells. [_Nat. Methods_, 19, 1243–1249 (2022)](https://www.nature.com/articles/s41592-022-01601-4)
 
 ## Contact
 
